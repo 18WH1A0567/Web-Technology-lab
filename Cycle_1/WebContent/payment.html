@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Payment</title>
-<style type="text/css">
-	* {
-	  box-sizing: border-box;
-	}
-	
-	.column {
-	  float: left;
-	  width: 50%;
-	  padding: 10px;
-	  height: 300px;
-	}
-	
-</style>
-</head>
-<body style="background: linear-gradient(to bottom, #ffffff 0%, #669999 100%);height: 650px;">
-	<a href="profile.html" style="color: #663300;background-color: white;text-decoration: blink;margin-left: 95%;"><b>Profile</b></a>
-	<h1 style="color: #074F59; text-align: center;" >Welcome to Book Mela</h1>
-	<h1 style="color: #074F59; text-align: center;" >Online book store</h1><br>
-	
-	<div class="white-box" style="background-color: white;text-align: center;margin-top: 50px;margin-left:150px;width:50%;">
-		<h1>Pay through credit card</h1><br>
-		<div class="row">
-		  <div class="column" style="text-align: left;">
-		    <p>Card holder's name:
-		    <p>Credit card number:
-		    <p>CVV:
-		    <p>Expiry date:
-		    <p>Amount:	
-		    <p>Address:		    
-		  </div>
-		  <div class="column" style="text-align: left;">
-		    <input type = "text"><br><br>
-			<input type="number" ><br><br>
-			<input type="password"><br><br>
-			<input type = "date"><br><br>
-			<input type="number"><br><br>
-			<input type="text" style="height:40px;"><br><br>
-		  </div>
-		</div>
+	<head>
+		<meta charset="UTF-8">
+		<title>Payment</title>
+		<style type="text/css">
+			* {
+			  box-sizing: border-box;
+			}
 			
-		<a href="confirmation.html" style="color: #663300;background-color: white;text-decoration: blink;"><b>Place order</b></a>
+			.column {
+			  float: left;
+			  width: 50%;
+			  padding: 10px;
+			  height: 300px;
+			}
+			
+		</style>
 		
-	</div>
-
-</body>
+		<script type="text/javascript">
+			function validate() {
+				
+				var letters = /^[A-Za-z]+$/;
+				cnum = paymentForm.cardnum.value;
+				cvv = paymentForm.cvv.value;
+				uname = paymentForm.uname.value;
+				
+				if(!uname.match(letters)){
+					alert("Name should contain only alphabet")
+					document.paymentForm.uname.focus();
+					return false;
+				}
+				
+				if(cnum.length != 12 ){
+					alert("Card number should contain only 12 digits.")
+					document.paymentForm.cardnum.focus();
+					return false;
+				}
+				if(cvv.length != 3 || isNaN(cvv)){
+					alert("CVV should contain only 3 digits.")
+					document.paymentForm.cvv.focus();
+					return false;
+				}
+			}
+		
+		</script>
+	</head>
+	<body style="background: linear-gradient(to bottom, #ffffff 0%, #669999 100%);height: 650px;">
+		<a href="profile.html" style="color: #663300;background-color: white;text-decoration: blink;margin-left: 95%;"><b>Profile</b></a>
+		<h1 style="color: #074F59; text-align: center;" >Welcome to Book Mela</h1>
+		<h1 style="color: #074F59; text-align: center;" >Online book store</h1><br>
+		
+		<div class="white-box" style="background-color: white;text-align: center;margin-top: 50px;margin-left:150px;width:50%;">
+			<form name = "paymentForm" action="confirmation.html" onsubmit="return validate()">
+				<h1>Pay through credit card</h1><br>
+				<div class="row">
+				  <div class="column" style="text-align: left;">
+				    <p>Card holder's name:
+				    <p>Credit card number:
+				    <p>CVV:
+				    <p>Expiry date:
+				    <p>Amount:	
+				    <p>Address:		    
+				  </div>
+				  <div class="column" style="text-align: left;">
+				    <input type = "text" name = "uname" required="required" required="required"><br><br>
+					<input type="number" name = "cardnum"  required="required"><br><br>
+					<input type="password" name = "cvv" required="required"><br><br>
+					<input type = "month" name = "date" required="required" placeholder="MM/YY"><br><br>
+					<input type="number" name = "amount" required="required"><br><br>
+					<input type="text" style="height:40px;" name = "address" required="required"><br><br>
+				  </div>
+				</div>
+					
+			 	<input type="submit" value="Place order" style="background-color: white;border: 0px;font-size: large;">
+				
+			</form>
+			
+		</div>
+	
+	</body>
 </html>
