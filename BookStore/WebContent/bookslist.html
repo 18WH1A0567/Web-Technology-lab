@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Books List</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.grid-container {
+		  display: grid;
+		  grid-template-columns: auto auto auto;
+		  background-color: #666600;
+		  padding: 10px;
+		}
+		.grid-item {
+		  background-color: rgba(255, 255, 255, 0.8);
+		  border: 1px  ;
+		  padding: 20px;
+		  font-size: 30px;
+		  text-align: center;
+		}
+	</style>
+	
+	
+</head>
+<body style="background: linear-gradient(to bottom, #ffffff 0%, #99ff33 100%);height: 100%;">
+<a href="profile.html" style="color: #663300;background-color: white;text-decoration: blink;margin-left: 95%;"><b>Profile</b></a>
+	<h1 style="color: #074F59; text-align: center;" >Welcome to Book Mela</h1>
+	<h1 style="color: #074F59; text-align: center;" >Online book store</h1><br>
+	
+	<form name = "bookForm" method="post"  action="ShoppingCartServlet" >
+	<div class="white-box" style="background-color: white;text-align: center;margin-top: 50px;margin-left:150px;width:80%;height: 60%;">
+		<h3>TEXTBOOKS AVAILABLE</h3>
+		 <div class="grid-container" style="width: 80%;margin-left: 120px;">
+			  <div class="grid-item">
+			  		<img src="images/c.jpeg"><br>
+			  		<input type="checkbox" id="book" name="book" value="450">
+			  		<label for = "book">C Programming</label>
+			  </div>
+			  <div class="grid-item">
+			  		<img src="images/maths.jpeg"><br>
+			  		<input type="checkbox" id="book" name="book" value="500">
+			  		<label for = "book">Mathematics</label>		
+			  </div>
+			  <div class="grid-item">
+			  		<img src="images/c++.jpeg"><br>
+			  		<input type="checkbox" id="book" name="book" value="450">
+			  		<label for = "book">C++ Programming</label>
+			  </div>  
+			  <div class="grid-item">
+			  		<img src="images/os.jpeg"><br>
+			  		<input type="checkbox" id="book" name="book" value="600">
+			  		<label for = "book">Operating System</label>
+			  </div>
+			  <div class="grid-item">
+			  		<img src="images/java.jpeg"><br>
+			  		<input type="checkbox" id="book" name="book" value="400">
+			  		<label for = "book">JAVA Programming</label>
+			  </div>
+			  <div class="grid-item">
+			  		<img src="images/dbms.jpeg"><br>
+			  		<input type="checkbox" id="book" name="book" value="350">
+			  		<label for = "book">Database Management System</label>
+			  </div>  
+			  <div class="grid-item">
+			  		<img src="images/python.png"><br>
+			  		<input type="checkbox" id="book" name="book" value="650">
+			  		<label for = "book">Python</label>
+			  </div>
+			  <div class="grid-item">
+			  		<img src="images/wt.jpeg"><br>
+			  		<input type="checkbox" id="book" name="book" value="850">
+			  		<label for = "book">Web Technologies</label>
+			  </div>
+			  <div class="grid-item">
+			  		<img src="images/cn.jpeg"><br>
+			  		<input type="checkbox" id="book" name="book" value="300">
+			  		<label for = "book">Computer Networks</label>
+			  </div>  
+		 </div>
+		
+		<br><br>
+		<input type="submit" value="Proceed to checkout" style="background-color: white ;border:0px; font-size: large;">
+		</form>
+		<br><br><br>
+		
+	</div>
+	<br><br>
+	
+
+</body>
+</html>

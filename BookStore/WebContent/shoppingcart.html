@@ -29,18 +29,18 @@
 		<div class="white-box" style="background-color: white;text-align: center;margin-top: 50px;margin-left:150px;width:50%;">
 			<br><h1>Shopping cart</h1>
 			Select the book:<br>
-			<form name="cartForm" action="payment.html" onsubmit="return validate()">
-				<select name="cars" id="cars" required="required">
+			<form name="cartForm"  method="post" onsubmit="return validate()" action="ShoppingCartServlet" >
+				<select name="books"  required="required">
 				    <option value="">----</option>
-				    <option value="#">PPS for C</option>
-				    <option value="#">Mathematics</option>
-				    <option value="#">OOP through C++</option>
-				    <option value="#">Java</option>
-				    <option value="#">Python</option>
-				    <option value="#">DBMS</option>
-				    <option value="#">OS</option>
-				    <option value="#">WT</option>
-				    <option value="#">CN</option>			    
+				    <option value="PPS">PPS for C</option>
+				    <option value="Mathematics">Mathematics</option>
+				    <option value="OOPs">OOP through C++</option>
+				    <option value="Java">Java</option>
+				    <option value="Python">Python</option>
+				    <option value="DBMS">DBMS</option>
+				    <option value="OS">OS</option>
+				    <option value="WT">WT</option>
+				    <option value="CN">CN</option>			    
 				</select>
 				<br><br>
 			
